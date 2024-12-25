@@ -5,7 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
+document.addEventListener("DOMContentLoaded", () => {
 (function() {
   "use strict";
 
@@ -137,6 +137,73 @@
   /**
    * Init isotope layout and filters
    */
+  var projects = [
+  //   {
+  //     id: "",
+  //     image: "assets/webSits/",
+  //     category: "",
+  //     title: "",
+  // },
+    {
+        id: "1",
+        image: "assets/webSits/weather-app/weatherApp.png",
+        category: "API",
+        title: "API using HTML,Css,JS",
+    },
+    {
+      id: "2",
+      image: "assets/webSits/dsRestaurant/ds1.png",
+      category: "Profile",
+      title: "DS-restaurant using Next.js",
+  },
+
+]
+
+var projectsList = document.querySelector("#ProjectList");
+var categoryList = document.querySelector(".category");
+var itemProject = [];
+
+for (let i = 0; i < 6; i++) {
+    itemProject.push(projects[i]);
+}
+
+const AllCategory = projects.filter((project, index, self) =>
+    self.findIndex(p => p.category === project.category) === index
+);
+
+categoryList.innerHTML += `<li data-filter="*" class="filter-active">All</li>`;
+
+AllCategory.forEach((i) => {
+    categoryList.innerHTML += `<li data-filter=".filter-${i.category}">${i.category}</li>`;
+});
+
+function renderProjectView(items) {
+  projectsList.innerHTML = "";
+// ${project.category}
+// ${project.image}
+// ${project.title}
+
+  items.forEach((project) => {
+      projectsList.innerHTML += `
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-${project.category}">
+            <div class="portfolio-content h-100">
+              <img src=${project.image} class="img-fluid"  alt="${project.category}">
+              <div class="portfolio-info">
+                <h4>${project.category} 1</h4>
+                <p>${project.title}</p>
+                <a href=${project.image} title="${project.category} 1" data-gallery="portfolio-gallery-${project.category}"
+                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                    class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- End Portfolio Item -->
+          `;
+  });
+}
+renderProjectView(itemProject);
+
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -226,4 +293,4 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-})();
+})();})
