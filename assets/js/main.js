@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // },
     {
         id: "1",
-        image: "assets/webSits/weather/w.png",
+        image: "assets/webSits/weatherApp/w.png",
         category: "website",
         title: "API using HTML,Css,JS",
     },
