@@ -9,12 +9,14 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,16 +25,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -51,9 +46,6 @@
     </a>
 
     <div class="social-links text-center">
-      <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
       <a href="https://mostaql.com/u/ahmed_magdy_98" class="google-plus" title="mostaql"><i
           class="bi bi-circle"></i></a>
       <a href="https://www.upwork.com/freelancers/~01498243d343715ad1" class="linkedin" title="LinkedIn">up</a>
@@ -66,7 +58,7 @@
         <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#Projects"><i class="bi bi-images navicon"></i> Projects</a></li>
         <!-- <li><a href="/#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
         <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
@@ -79,11 +71,11 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Project Details</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li class="current">Project Details</li>
           </ol>
         </nav>
       </div>
@@ -94,33 +86,15 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
-
+        <div id="project" class="row gy-4">
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
+              <!-- Additional required wrapper -->
+              <div id="slide" class="swiper-wrapper">
+                <!-- Slides -->
+                <!-- <div class="swiper-slide">
                   <img src="assets/img/portfolio/app-1.jpg" alt="">
                 </div>
-
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/product-1.jpg" alt="">
                 </div>
@@ -131,32 +105,16 @@
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/books-1.jpg" alt="">
-                </div>
-
+                </div> -->
               </div>
+              <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
+
             </div>
           </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
-          </div>
-
         </div>
+
+      </div>
 
       </div>
 
@@ -168,21 +126,15 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ahmed Magdy</strong> <span></span>
+        </p>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -197,10 +149,130 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <!-- <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize Swiper
+    document.addEventListener('DOMContentLoaded', function () {
+      var href = document.location.href;
+      var id = href.split('?')[1];
+      var projects = [
+        // {
+        //   id: "",
+        //   image: ["assets/webSits/",],
+        //   category: "",
+        //   title: "",
+        // link: "",
+        // ProjectDate :"",
+        // gitHubLink: "",
+        // description: ""
+        // },
+        {
+          id: "1",
+          image: ["assets/webSits/weather-app/weatherApp.png"],
+          category: "website",
+          title: "weatherApp",
+          ProjectDate: "2021/2",
+          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/weather-api.git",
+          description: " The Weather App is an application that allows users to search for the temperature of a country based on the zip code of the area. Users can also log how they feel today."
+        },
+        {
+          id: "2",
+          image: ["assets/webSits/dsRestaurant/ds1.png", "assets/webSits/dsRestaurant/ds2.png", "assets/webSits/dsRestaurant/ds3.png", "assets/webSits/dsRestaurant/ds4.png",],
+          category: "Profile",
+          ProjectDate: "2022/6",
+          title: "DS-restaurant using Next.js",
+          link: "https://ds-restaurant-aqoyrj1qv-ahmedmagdyabdalhadys-projects.vercel.app/",
+          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/DS-Restaurant.git",
+          description: "Menu Food is a website that displays different food categories for breakfast, lunch, and dinner. Users can filter the categories by meal type, and they can also search for specific categories"
+        },
+        {
+          id: "3",
+          image: ["assets/webSits/company/c3.png", "assets/webSits/company/c1.png", "assets/webSits/company/c2.png", "assets/webSits/company/c4.png",],
+          category: "website",
+          title: "company ",
+          link: "https://company-animation.vercel.app/",
+          ProjectDate: "2021",
+          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/compan-By-Animation.git",
+          description: " This site is useful for use by small and medium companies to display their products and services, and it is also responsive on all screens."
+        },
+
+      ]
+      // Find the project
+      var itemProject = projects.find((p) => p.id === id);
+
+      // Get the elements
+      var project = document.getElementById("project");
+      var slide = document.getElementById("slide");
+
+      // Debugging the project object
+      console.log(itemProject);
+
+      // Generate the slides
+      itemProject.image.forEach((img) => {
+        slide.innerHTML += `
+    <div class="swiper-slide">
+      <img src="${img}" alt="Portfolio Image">
+    </div>
+  `;
+      });
+
+      // Generate the project details
+      project.innerHTML += `
+  <div class="col-lg-4">
+    <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+      <h3>${itemProject.title} information</h3>
+      <ul>
+        <li><strong>Category</strong>: ${itemProject.category}</li>
+        <li><strong>Client</strong>: ${itemProject.Client || "My Project"}</li>
+        ${itemProject.ProjectDate ? `<li><strong>Project date</strong>: ${itemProject.ProjectDate}</li>` : ""}
+        ${itemProject.link ? `<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>` : ""}
+        ${itemProject.gitHubLink ? `<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>` : ""}
+      </ul>
+    </div>
+    <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+      <h2>Project description</h2>
+      <p>
+        ${itemProject.description}
+      </p>
+    </div>
+  </div>
+`;
+
+
+
+
+
+
+
+
+      new Swiper('.portfolio-details-slider', {
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 5000,
+        },
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+
+
+
+
+
+
+
+    });
+
+  </script>
 
 </body>
 

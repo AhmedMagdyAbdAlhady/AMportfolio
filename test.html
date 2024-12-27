@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Test</title>
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+<!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+<div class="col-lg-8">
+    <div  class="portfolio-details-slider swiper init-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <!-- <div class="swiper-slide">
+          <img src="assets/img/portfolio/app-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/product-1.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/branding-1.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/books-1.jpg" alt="">
+        </div>
+      </div> -->
+      ${
+        itemProject.image.foreach((img)=>{
+          <div class="swiper-slide">
+            <img src="assets/img/portfolio/books-1.jpg" alt="">
+          </div>
+        })
+      }
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+    </div>
+  </div>
+</div>
+  <div class="col-lg-4">
+    <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+      <h3>Project information</h3>
+      <ul>
+        <li><strong>Category</strong>${itemProject.category}</li>
+        <li><strong>Client</strong>${itemProject.Client?itemProject.Client:"my project" }</li>
+        ${itemProject.ProjectDate?<li><strong>Project date</strong>:${itemProject.ProjectDate }</li>:""}
+        ${itemProject.link?<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>:''}
+        ${itemProject.gitHubLink?<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>:''}
+      </ul>
+    </div>
+    <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+      <h2>Project description</h2>
+      <p>
+        ${itemProject.decription}
+      </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+
+
+
+<div class="col-lg-8">
+    <div  class="portfolio-details-slider swiper init-swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/app-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/product-1.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/branding-1.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/portfolio/books-1.jpg" alt="">
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+      <h3>Project information</h3>
+      <ul>
+        <li><strong>Category</strong>: Web design</li>
+        <li><strong>Client</strong>: ASU Company</li>
+        <li><strong>Project date</strong>: 01 March, 2020</li>
+        <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+      </ul>
+    </div>
+    <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+      <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    
+  </script>
+</body>
+</html>

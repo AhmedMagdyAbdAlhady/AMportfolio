@@ -127,13 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
+  
   /**
    * Init isotope layout and filters
    */
@@ -147,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         id: "1",
         image: "assets/webSits/weather-app/weatherApp.png",
-        category: "API",
+        category: "website",
         title: "API using HTML,Css,JS",
     },
     {
@@ -156,6 +150,12 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Profile",
       title: "DS-restaurant using Next.js",
   },
+  {
+    id: "3",
+    image: "assets/webSits/company/c3.png",
+    category: "website",
+    title: "HTML,Css,JS and animation",
+},
 
 ]
 
@@ -187,13 +187,13 @@ function renderProjectView(items) {
       projectsList.innerHTML += `
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-${project.category}">
             <div class="portfolio-content h-100">
-              <img src=${project.image} class="img-fluid"  alt="${project.category}">
+              <img src=${project.image} style="" class="img-fluid custome-width"  alt="${project.category}">
               <div class="portfolio-info">
                 <h4>${project.category} 1</h4>
                 <p>${project.title}</p>
                 <a href=${project.image} title="${project.category} 1" data-gallery="portfolio-gallery-${project.category}"
                   class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                <a href="portfolio-details.html?${project.id}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div>
@@ -203,6 +203,13 @@ function renderProjectView(items) {
   });
 }
 renderProjectView(itemProject);
+
+/**
+   * Initiate glightbox
+   */
+const glightbox = GLightbox({
+  selector: '.glightbox'
+});
 
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';

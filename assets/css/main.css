@@ -792,7 +792,9 @@ section,
   list-style: none;
   text-align: center;
 }
-
+.portfolio  .custome-width{
+  width: 365px; height: 300px;
+}
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
@@ -818,11 +820,18 @@ section,
 .portfolio .portfolio-filters li:last-child {
   margin-right: 0;
 }
-
+@media (max-width: 768px) {
+  .portfolio .custome-width{
+    width: 100%;
+  }
+}
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
+  }
+  .custome-width{
+    width: 100%;
   }
 }
 
