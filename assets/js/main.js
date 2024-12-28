@@ -156,6 +156,16 @@ document.addEventListener("DOMContentLoaded", () => {
     category: "website",
     title: "HTML,Css,JS and animation",
 },
+{
+  id: "4",
+  image: "assets/webSits/ClotheStore/2.png",
+  category: "website",
+  title: "clothe Store",
+  link: "https://my-app-theta-drab.vercel.app/",
+  ProjectDate: "2023",
+  gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/my-App.git",
+  description: "An online store showcasing clothing products, implementing discounts displayed dynamically from databases, with a shopping cart functionality and login/sign-in pages."
+},
 
 ]
 
