@@ -179,33 +179,33 @@
           // Generate the slides
           itemProject.image.forEach((img) => {
             slide.innerHTML += `
-<div class="swiper-slide">
-<img src="${img}" alt="Portfolio Image">
-</div>
-`;
+              <div class="swiper-slide">
+              <img src="${img}" alt="Portfolio Image">
+              </div>
+              `;
           });
 
           // Generate the project details
           project.innerHTML += `
-<div class="col-lg-4">
-<div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-<h3>${itemProject.title} information</h3>
-<ul>
-  <li><strong>Category</strong>: ${itemProject.category}</li>
-  <li><strong>Client</strong>: ${itemProject.Client || "My Project"}</li>
-  ${itemProject.ProjectDate ? `<li><strong>Project date</strong>: ${itemProject.ProjectDate}</li>` : ""}
-  ${itemProject.link ? `<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>` : ""}
-  ${itemProject.gitHubLink ? `<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>` : ""}
-</ul>
-</div>
-<div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-<h2>Project description</h2>
-<p>
-  ${itemProject.description}
-</p>
-</div>
-</div>
-`;
+              <div class="col-lg-4">
+              <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>${itemProject.title} information</h3>
+              <ul>
+                <li><strong>Category</strong>: ${itemProject.category}</li>
+                <li><strong>Client</strong>: ${itemProject.Client || "My Project"}</li>
+                ${itemProject.ProjectDate ? `<li><strong>Project date</strong>: ${itemProject.ProjectDate}</li>` : ""}
+                ${itemProject.link ? `<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>` : ""}
+                ${itemProject.gitHubLink ? `<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>` : ""}
+              </ul>
+              </div>
+              <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Project description</h2>
+              <p>
+                ${itemProject.description}
+              </p>
+              </div>
+              </div>
+              `;
 
           new Swiper('.portfolio-details-slider', {
             loop: true,
@@ -224,23 +224,7 @@
         } catch (error) {
           console.error(error)
         }
-      }())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      }()) 
 
     });
 
