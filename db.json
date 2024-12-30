@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "image": ["assets/webSits/weather.png"],
+      "category": "website",
+      "title": "weatherApp",
+      "ProjectDate": "2021/2",
+      "gitHubLink": "https://github.com/AhmedMagdyAbdAlhady/weather-api.git",
+      "description": " The Weather App is an application that allows users to search for the temperature of a country based on the zip code of the area. Users can also log how they feel today."
+    },
+    {
+      "id": "2",
+      "image": [
+        "assets/webSits/dsRestaurant/ds1.png",
+        "assets/webSits/dsRestaurant/ds2.png",
+        "assets/webSits/dsRestaurant/ds3.png",
+        "assets/webSits/dsRestaurant/ds4.png"
+      ],
+      "category": "Profile",
+      "ProjectDate": "2022/6",
+      "title": "DS-restaurant using Next.js",
+      "link": "https://ds-restaurant.vercel.app/",
+      "gitHubLink": "https://github.com/AhmedMagdyAbdAlhady/DS-Restaurant.git",
+      "description": "Menu Food is a website that displays different food categories for breakfast, lunch, and dinner. Users can filter the categories by meal type, and they can also search for specific categories"
+    },
+    {
+      "id": "3",
+      "image": [
+        "assets/webSits/company/c3.png",
+        "assets/webSits/company/c1.png",
+        "assets/webSits/company/c2.png",
+        "assets/webSits/company/c4.png"
+      ],
+      "category": "website",
+      "title": "company ",
+      "link": "https://company-animation.vercel.app/",
+      "ProjectDate": "2021",
+      "gitHubLink": "https://github.com/AhmedMagdyAbdAlhady/compan-By-Animation.git",
+      "description": " This site is useful for use by small and medium companies to display their products and services, and it is also responsive on all screens."
+    },
+    {
+      "id": "4",
+      "image": [
+        "assets/webSits/ClotheStore/1.png",
+        "assets/webSits/ClotheStore/2.png",
+        "assets/webSits/ClotheStore/3.png",
+        "assets/webSits/ClotheStore/4.png",
+        "assets/webSits/ClotheStore/5.png",
+        "assets/webSits/ClotheStore/6.png"
+      ],
+      "category": "website",
+      "title": "clothe Store",
+      "link": "https://my-app-theta-drab.vercel.app/",
+      "ProjectDate": "2023",
+      "gitHubLink": "https://github.com/AhmedMagdyAbdAlhady/my-App.git",
+      "description": "An online store showcasing clothing products, implementing discounts displayed dynamically from databases, with a shopping cart functionality and login/sign-in pages."
+    }
+  ]
+}

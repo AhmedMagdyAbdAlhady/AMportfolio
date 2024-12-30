@@ -159,101 +159,72 @@
   <script>
     // Initialize Swiper
     document.addEventListener('DOMContentLoaded', function () {
+
       var href = document.location.href;
-      var id = href.split('?')[1];
-      var projects = [
-        // {
-        //   id: "",
-        //   image: ["assets/webSits/",],
-        //   category: "",
-        //   title: "",
-        // link: "",
-        // ProjectDate :"",
-        // gitHubLink: "",
-        // description: ""
-        // },
-        {
-          id: "1",
-          image: ["assets/webSits/weather.png"],
-          category: "website",
-          title: "weatherApp",
-          ProjectDate: "2021/2",
-          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/weather-api.git",
-          description: " The Weather App is an application that allows users to search for the temperature of a country based on the zip code of the area. Users can also log how they feel today."
-        },
-        {
-          id: "2",
-          image: ["assets/webSits/dsRestaurant/ds1.png", "assets/webSits/dsRestaurant/ds2.png", "assets/webSits/dsRestaurant/ds3.png", "assets/webSits/dsRestaurant/ds4.png",],
-          category: "Profile",
-          ProjectDate: "2022/6",
-          title: "DS-restaurant using Next.js",
-          link: "https://ds-restaurant.vercel.app/",
-          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/DS-Restaurant.git",
-          description: "Menu Food is a website that displays different food categories for breakfast, lunch, and dinner. Users can filter the categories by meal type, and they can also search for specific categories"
-        },
-        {
-          id: "3",
-          image: ["assets/webSits/company/c3.png", "assets/webSits/company/c1.png", "assets/webSits/company/c2.png", "assets/webSits/company/c4.png",],
-          category: "website",
-          title: "company ",
-          link: "https://company-animation.vercel.app/",
-          ProjectDate: "2021",
-          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/compan-By-Animation.git",
-          description: " This site is useful for use by small and medium companies to display their products and services, and it is also responsive on all screens."
-        },
-        {
-          id: "4",
-          image: ["assets/webSits/ClotheStore/1.png","assets/webSits/ClotheStore/2.png","assets/webSits/ClotheStore/3.png","assets/webSits/ClotheStore/4.png","assets/webSits/ClotheStore/5.png","assets/webSits/ClotheStore/6.png"],
-          category: "website",
-          title: "clothe Store",
-          link: "https://my-app-theta-drab.vercel.app/",
-          ProjectDate: "2023",
-          gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/my-App.git",
-          description: "An online store showcasing clothing products, implementing discounts displayed dynamically from databases, with a shopping cart functionality and login/sign-in pages."
-        },
-
-      ]
-      // Find the project
-      var itemProject = projects.find((p) => p.id === id);
-
+      var id = href.split('=')[1];
+      let link = `http://localhost:3000/projects/${id}`
+      let itemProject;
       // Get the elements
       var project = document.getElementById("project");
       var slide = document.getElementById("slide");
+      // Find the project
+      (async function () {
+        let res = await fetch(link);
+        try {
+          itemProject = await res.json();
 
-      // Debugging the project object
-      console.log(itemProject);
+          // Debugging the project object
+          console.log(itemProject);
 
-      // Generate the slides
-      itemProject.image.forEach((img) => {
-        slide.innerHTML += `
-    <div class="swiper-slide">
-      <img src="${img}" alt="Portfolio Image">
-    </div>
-  `;
-      });
+          // Generate the slides
+          itemProject.image.forEach((img) => {
+            slide.innerHTML += `
+<div class="swiper-slide">
+<img src="${img}" alt="Portfolio Image">
+</div>
+`;
+          });
 
-      // Generate the project details
-      project.innerHTML += `
-  <div class="col-lg-4">
-    <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-      <h3>${itemProject.title} information</h3>
-      <ul>
-        <li><strong>Category</strong>: ${itemProject.category}</li>
-        <li><strong>Client</strong>: ${itemProject.Client || "My Project"}</li>
-        ${itemProject.ProjectDate ? `<li><strong>Project date</strong>: ${itemProject.ProjectDate}</li>` : ""}
-        ${itemProject.link ? `<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>` : ""}
-        ${itemProject.gitHubLink ? `<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>` : ""}
-      </ul>
-    </div>
-    <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-      <h2>Project description</h2>
-      <p>
-        ${itemProject.description}
-      </p>
-    </div>
-  </div>
+          // Generate the project details
+          project.innerHTML += `
+<div class="col-lg-4">
+<div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+<h3>${itemProject.title} information</h3>
+<ul>
+  <li><strong>Category</strong>: ${itemProject.category}</li>
+  <li><strong>Client</strong>: ${itemProject.Client || "My Project"}</li>
+  ${itemProject.ProjectDate ? `<li><strong>Project date</strong>: ${itemProject.ProjectDate}</li>` : ""}
+  ${itemProject.link ? `<li><strong>Project URL</strong>: <a href="${itemProject.link}">link</a></li>` : ""}
+  ${itemProject.gitHubLink ? `<li><strong>Project github</strong>: <a href="${itemProject.gitHubLink}">github</a></li>` : ""}
+</ul>
+</div>
+<div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+<h2>Project description</h2>
+<p>
+  ${itemProject.description}
+</p>
+</div>
+</div>
 `;
 
+          new Swiper('.portfolio-details-slider', {
+            loop: true,
+            speed: 600,
+            autoplay: {
+              delay: 5000,
+            },
+            slidesPerView: 1,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          });
+
+
+        } catch (error) {
+          console.error(error)
+        }
+      }())
 
 
 
@@ -261,18 +232,9 @@
 
 
 
-      new Swiper('.portfolio-details-slider', {
-        loop: true,
-        speed: 600,
-        autoplay: {
-          delay: 5000,
-        },
-        slidesPerView: 1,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
+
+
+
 
 
 
