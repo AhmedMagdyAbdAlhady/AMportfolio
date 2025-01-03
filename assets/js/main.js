@@ -166,6 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
   gitHubLink: "https://github.com/AhmedMagdyAbdAlhady/my-App.git",
   description: "An online store showcasing clothing products, implementing discounts displayed dynamically from databases, with a shopping cart functionality and login/sign-in pages."
 },
+{
+  id: "5",
+  title: "food website using bootstrap",
+  image: "assets/webSits/food/1.png",
+  category: "website",
+  link: "",
+  gitHubLink: "",
+  ProjectDate: "2021-02-28",
+  description: "food website to show menu, about us"
+}
 
 ]
 
@@ -203,7 +213,7 @@ function renderProjectView(items) {
                 <p>${project.title}</p>
                 <a href=${project.image} title="${project.category} 1" data-gallery="portfolio-gallery-${project.category}"
                   class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html?${project.id}" title="More Details" class="details-link"><i
+                <a href="portfolio-details.html?id=${project.id}" title="More Details" class="details-link"><i
                     class="bi bi-link-45deg"></i></a>
               </div>
             </div>
