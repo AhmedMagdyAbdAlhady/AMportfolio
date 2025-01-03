@@ -2,7 +2,9 @@
   "projects": [
     {
       "id": "1",
-      "image": ["assets/webSits/weather.png"],
+      "image": [
+        "assets/webSits/weather.png"
+      ],
       "category": "website",
       "title": "weatherApp",
       "ProjectDate": "2021/2",
@@ -42,12 +44,12 @@
     {
       "id": "4",
       "image": [
-        "assets/webSits/ClotheStore/1.png",
         "assets/webSits/ClotheStore/2.png",
         "assets/webSits/ClotheStore/3.png",
         "assets/webSits/ClotheStore/4.png",
         "assets/webSits/ClotheStore/5.png",
-        "assets/webSits/ClotheStore/6.png"
+        "assets/webSits/ClotheStore/6.png",
+        "assets/webSits/ClotheStore/1.png"
       ],
       "category": "website",
       "title": "clothe Store",
@@ -55,6 +57,21 @@
       "ProjectDate": "2023",
       "gitHubLink": "https://github.com/AhmedMagdyAbdAlhady/my-App.git",
       "description": "An online store showcasing clothing products, implementing discounts displayed dynamically from databases, with a shopping cart functionality and login/sign-in pages."
+    },
+    {
+      "id": "16a5",
+      "title": "food website using bootstrap",
+      "image": [
+        "assets/webSits/food/1.png",
+        "assets/webSits/food/2.png",
+        "assets/webSits/food/3.png",
+        "assets/webSits/food/4.png"
+      ],
+      "category": "website",
+      "link": "",
+      "gitHubLink": "",
+      "ProjectDate": "2021-02-28",
+      "description": "food website to show menu, about us"
     }
   ]
 }
