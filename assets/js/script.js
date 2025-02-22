@@ -102,7 +102,7 @@ function renderProjectView(items) {
                   <a href=${project.image} title="${project.category}" data-gallery="portfolio-gallery-${project.category}"
                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                      class="bi bi-link-45deg"></i></a> 
                 </div>
               </div>
             </div>
